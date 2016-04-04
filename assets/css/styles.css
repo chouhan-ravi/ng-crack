@@ -1,0 +1,72 @@
+h2 { 
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;   
+  font-weight: lighter;
+}
+body { 
+  margin: 2em; 
+}
+body, input[text], button { 
+  color: #888; 
+  font-family: Cambria, Georgia; 
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa; 
+  cursor: auto;
+}
+/* everywhere else */
+* { 
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+div.row{
+  width:100%;
+}
+.col-md-6{
+  width:50%;
+  display: inline-block;
+}
+.todo-list{
+  list-style-type: none;
+  padding: 0px 0px;
+}
+.todo-list li{
+  width:100%;
+}
+.col-md-4{
+  width: 18.82%;
+  display: inline-block;
+  padding: 8px 0px 8px;
+  line-height: 18px;
+}
+.list-title{
+  font-weight:bold;
+  font-size:16px;
+  border-bottom: 1px solid #ffccff;
+  text-align: center;
+  padding: 10px 0;
+}
+.todo-list li.todo-list-data:nth-child(odd){
+  background-color: #ffccff;
+  border-bottom: 1px thin #000;
+}
+.todo-list li.todo-list-data:nth-child(even){
+  background-color:#ffcccc;
+  border-bottom: 1px thin #000;
+}
+.completed{
+  text-decoration: line-through;
+}
