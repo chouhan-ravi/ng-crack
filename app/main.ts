@@ -2,6 +2,7 @@ import { bootstrap } from 'angular2/platform/browser';
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 import { HomeComponent } from './components/home';
+import { DemoComponent } from './components/demo';
 import 'rxjs/Rx';
 
 
@@ -10,6 +11,7 @@ import 'rxjs/Rx';
 	template: `
     <h1>{{title}}</h1>
     <a [routerLink]="['Home']">Home</a>
+    <a [routerLink]="['Demo']">Demo</a>
     <router-outlet></router-outlet>`,
 	directives: [ROUTER_DIRECTIVES],
 	providers: [
@@ -22,13 +24,13 @@ import 'rxjs/Rx';
 		name: 'Home',
 		component: HomeComponent,
 		useAsDefault: true
-	}/*,
-	{
-		path: '/aboutus',
-		name: 'About Us',
-		component: HomeComponent
-		//component: AboutUsComponent
 	},
+	{
+		path: '/demo',
+		name: 'Demo',
+		component: DemoComponent
+		//component: AboutUsComponent
+	},/*
 	{
 		path: '/todo/...',
 		name: 'Todo',

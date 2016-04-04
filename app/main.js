@@ -1,4 +1,4 @@
-System.register(['angular2/platform/browser', 'angular2/core', 'angular2/router', './components/home', 'rxjs/Rx'], function(exports_1, context_1) {
+System.register(['angular2/platform/browser', 'angular2/core', 'angular2/router', './components/home', './components/demo', 'rxjs/Rx'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/platform/browser', 'angular2/core', 'angular2/router'
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var browser_1, core_1, router_1, home_1;
+    var browser_1, core_1, router_1, home_1, demo_1;
     var AppComponent;
     return {
         setters:[
@@ -26,6 +26,9 @@ System.register(['angular2/platform/browser', 'angular2/core', 'angular2/router'
             function (home_1_1) {
                 home_1 = home_1_1;
             },
+            function (demo_1_1) {
+                demo_1 = demo_1_1;
+            },
             function (_1) {}],
         execute: function() {
             AppComponent = (function () {
@@ -35,7 +38,7 @@ System.register(['angular2/platform/browser', 'angular2/core', 'angular2/router'
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'ng-crack-view',
-                        template: "\n    <h1>{{title}}</h1>\n    <a [routerLink]=\"['Home']\">Home</a>\n    <router-outlet></router-outlet>",
+                        template: "\n    <h1>{{title}}</h1>\n    <a [routerLink]=\"['Home']\">Home</a>\n    <a [routerLink]=\"['Demo']\">Demo</a>\n    <router-outlet></router-outlet>",
                         directives: [router_1.ROUTER_DIRECTIVES],
                         providers: [
                             router_1.ROUTER_PROVIDERS
@@ -47,19 +50,12 @@ System.register(['angular2/platform/browser', 'angular2/core', 'angular2/router'
                             name: 'Home',
                             component: home_1.HomeComponent,
                             useAsDefault: true
-                        } /*,
-                        {
-                            path: '/aboutus',
-                            name: 'About Us',
-                            component: HomeComponent
-                            //component: AboutUsComponent
                         },
                         {
-                            path: '/todo/...',
-                            name: 'Todo',
-                            component: HomeComponent
-                            //component: TodoComponent
-                        }*/
+                            path: '/demo',
+                            name: 'Demo',
+                            component: demo_1.DemoComponent
+                        },
                     ]), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
